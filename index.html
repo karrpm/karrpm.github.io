@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دورة التجارة الإلكترونية</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #e0f2f1, #ffffff);
+            color: #333;
+        }
+        header {
+            background-color: #00695c;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 2em;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #004d40;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1em;
+        }
+        nav a:hover {
+            color: #ffeb3b;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 30px;
+        }
+        .product {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            width: 90%;
+            max-width: 500px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .product:hover {
+            transform: scale(1.03);
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+        }
+        .product-info {
+            padding: 20px;
+        }
+        .product-info h3 {
+            font-size: 1.8em;
+            color: #00796b;
+        }
+        .product-info p {
+            font-size: 1.2em;
+        }
+        .details {
+            display: none;
+            padding: 15px;
+            background-color: #f1f8e9;
+            font-family: 'Courier New', monospace;
+            font-size: 1.1em;
+            border-top: 1px solid #ccc;
+            direction: rtl;
+        }
+        .details.active {
+            display: block;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .add-to-cart-btn {
+            background-color: #ff9800;
+            border: none;
+            padding: 12px 20px;
+            color: white;
+            font-size: 1.1em;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .add-to-cart-btn:hover {
+            background-color: #f57c00;
+        }
+        .whatsapp-btn {
+            background-color: #25d366;
+            color: white;
+            padding: 12px 20px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .payment-section {
+            background-color: #e8f5e9;
+            padding: 30px;
+            text-align: center;
+        }
+        .payment-section h2 {
+            color: #00695c;
+        }
+        .payment-methods {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 15px;
+            font-size: 1.1em;
+        }
+        footer {
+            background-color: #004d40;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 1em;
+        }
+        .social {
+            margin-top: 10px;
+        }
+        .social a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    دورة التجارة الإلكترونية
+</header>
+
+<nav>
+    <a href="#home">الرئيسية</a>
+    <a href="#course">الدورة</a>
+    <a href="#payment">طرق الدفع</a>
+    <a href="#contact">تواصل معنا</a>
+</nav>
+
+<div class="container" id="course">
+    <div class="product" onclick="toggleDetails(this)">
+        <img src="https://cdn.pixabay.com/photo/2015/01/21/14/14/apple-606761_960_720.jpg" alt="صورة حاسب آلي">
+        <div class="product-info">
+            <h3>دورة التجارة الإلكترونية</h3>
+            <p>السعر: 50 ريال</p>
+        </div>
+        <div class="details">
+            ✨✨ دورة احترافية لتعلم التجارة الإلكترونية بإشراف ✨ليان✨  
+            <br><br> السعر: 50 ريال  
+            <br> المحتوى: فيديوهات - نصائح - استراتيجيات تسويق  
+            <br> المدرب: ★ ليان ★  
+        </div>
+        <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart(this);">إضافة إلى السلة</button>
+        <a class="whatsapp-btn" href="https://wa.me/9660594998048" target="_blank">تواصل عبر واتساب</a>
+    </div>
+</div>
+
+<section class="payment-section" id="payment">
+    <h2>طرق الدفع</h2>
+    <div class="payment-methods">
+        <div>تحويل بنكي</div>
+        <div>مدى</div>
+        <div>Visa</div>
+        <div>Mastercard</div>
+        <div>Apple Pay</div>
+    </div>
+</section>
+
+<footer>
+    <p>جميع الحقوق محفوظة © ليان 2025</p>
+    <p>البريد الإلكتروني: akrre0000@gmail.com</p>
+    <div class="social">
+        تيك توك: <a href="https://www.tiktok.com/@xirlz" target="_blank">@xirlz</a>
+    </div>
+</footer>
+
+<script>
+    function toggleDetails(product) {
+        const detail = product.querySelector('.details');
+        const allDetails = document.querySelectorAll('.details');
+        allDetails.forEach(d => {
+            if (d !== detail) d.classList.remove('active');
+        });
+        detail.classList.toggle('active');
+    }
+
+    function addToCart(button) {
+        button.textContent = '✔ تمت الإضافة!';
+        button.style.backgroundColor = '#4caf50';
+        setTimeout(() => {
+            button.textContent = 'إضافة إلى السلة';
+            button.style.backgroundColor = '#ff9800';
+        }, 2000);
+    }
+</script>
+
+</body>
+</html>
